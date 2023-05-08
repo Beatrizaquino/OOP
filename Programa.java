@@ -5,19 +5,19 @@ public class Programa {
     
     public static void main(String[] args){
 
-        try (// Locale.setDefault(Locale.US);
-        Scanner scanner = new Scanner(System.in)) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
             double  xB, xC, yA, yB, yC;
             double xA;
 
             System.out.println("Enter the measures of triangle X: ");
-            xA = scanner.nextDouble();
-            xB = scanner.nextDouble();
-            xC = scanner.nextDouble();
+            xA = sc.nextDouble();
+            xB = sc.nextDouble();
+            xC = sc.nextDouble();
             System.out.println("Enter the measures of triangle Y");
-            yA = scanner.nextDouble();
-            yB = scanner.nextDouble();
-            yC = scanner.nextDouble();
+            yA = sc.nextDouble();
+            yB = sc.nextDouble();
+            yC = sc.nextDouble();
 
              double p = (xA + xB + xC) / 2.0;
              double areaX = Math.sqrt(p  * (p - xA) * (p - xB) * (p - xC));
@@ -33,8 +33,9 @@ public class Programa {
              } else {
                  System.out.println("Large area: Y");
              }
+            
+            sc.close();
         }
 
-    }
-    
 }
+
